@@ -1,0 +1,10 @@
+[project]
+name = "shared"
+version = "0.1.0"
+description = "JSON-RPC 2.0 wire-format models — no logic, no I/O"
+requires-python = ">=3.10"
+dependencies = []
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

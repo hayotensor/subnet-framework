@@ -1,0 +1,15 @@
+[project]
+name = "subnet-app"
+version = "0.1.0"
+description = "Application compartment — Starlette RPC server"
+requires-python = ">=3.10"
+dependencies = [
+    "starlette>=0.36",
+    "uvicorn[standard]>=0.27",
+    "anyio>=4.0",
+    "shared",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
