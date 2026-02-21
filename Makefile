@@ -6,6 +6,9 @@ setup:
 	./.venv/bin/pip install -e shared
 	./.venv/bin/pip install -e app
 	./.venv/bin/pip install -e engine
+	./.venv/bin/pip install -e consensus
+	./.venv/bin/pip install -e chain
+	./.venv/bin/pip install -e network
 	./.venv/bin/pip install ruff pytest pytest-asyncio httpx
 
 run-app:

@@ -19,6 +19,7 @@ subnet-comp/
 ├── shared/                 # Shared JSON-RPC 2.0 wire format models (Zero dependencies)
 ├── engine/                 # Engine compartment: Orchestration & Thin Client (httpx)
 └── app/                    # Application compartment: Business Logic (Starlette)
+└── consensus/              # Consensus compartment: Business Logic
 ```
 
 ## Getting Started
@@ -55,6 +56,15 @@ make setup
 
    This will execute a demonstration of unary calls and streaming events.
 
+3. **Run the Consensus Demo**:
+   In a separate terminal:
+
+   ```bash
+   make run-consensus
+   ```
+
+   This will execute a demonstration of consensus logic.
+
 ### Manual Verification (curl)
 
 You can verify the RPC endpoint manually:
@@ -78,6 +88,7 @@ make test
 1. **Shared**: Defines the standard JSON-RPC 2.0 structures. It ensures both sides speak the same language without sharing logic.
 2. **Application**: A Starlette-based server that exposes RPC methods. It manages concurrent streams using AnyIO.
 3. **Engine**: A client that orchestrates requests. It handles the complexities of networking, retries, and timeouts, keeping the application logic clean.
+4. **Consensus**: A server that handles consensus logic.
 
 ---
 Designed for reliability, separation of concerns, and modern async Python.
